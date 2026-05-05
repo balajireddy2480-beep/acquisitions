@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/balajireddy2480-beep/acquisitions#readme",
   "dependencies": {
+    "@arcjet/node": "^1.4.0",
     "@neondatabase/serverless": "^1.1.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
