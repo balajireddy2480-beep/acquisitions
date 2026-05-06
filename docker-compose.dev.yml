@@ -1,0 +1,22 @@
+services:
+  app:
+    build:
+      context: .
+      target: dev
+    env_file:
+      - .env.development
+    ports:
+      - '5000:5000'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - neon-local
+    command: npm run dev
+
+  neon-local:
+    image: neondatabase/neon_local:latest
+    env_file:
+      - .env.development
+    ports:
+      - '5432:5432'

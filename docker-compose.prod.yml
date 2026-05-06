@@ -1,0 +1,26 @@
+services:
+  app:
+    build:
+      context: .
+      target: runner
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+      NEON_LOCAL: 'false'
+    ports:
+      - '5000:5000'
+    restart: unless-stopped
+
+  migrate:
+    build:
+      context: .
+      target: dev
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+      NEON_LOCAL: 'false'
+    command: npm run db:migrate
+    profiles:
+      - migrate
