@@ -117,3 +117,9 @@
 {"level":"error","message":"Error creating user: Error: User already exists","service":"acquisitions-api","timestamp":"2026-05-05T08:45:15.003Z"}
 {"level":"error","message":"Error creating user: Error: User already exists","service":"acquisitions-api","timestamp":"2026-05-05T08:45:15.721Z"}
 {"level":"error","message":"Error creating user: Error: User already exists","service":"acquisitions-api","timestamp":"2026-05-05T08:45:15.933Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:42.166Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:53.830Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:54.753Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:55.878Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:41:01.304Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:50:03.305Z"}

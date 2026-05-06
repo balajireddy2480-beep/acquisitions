@@ -634,3 +634,20 @@
 {"level":"info","message":"::1 - - [05/May/2026:12:14:48 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-05T12:14:48.929Z"}
 {"level":"info","message":"::1 - - [05/May/2026:12:14:49 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-05T12:14:49.238Z"}
 {"level":"info","message":"::1 - - [05/May/2026:12:14:49 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-05T12:14:49.458Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-05-06T11:30:31.952Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:30:31 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0\"","service":"acquisitions-api","timestamp":"2026-05-06T11:30:31.961Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:30:32 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0\"","service":"acquisitions-api","timestamp":"2026-05-06T11:30:32.154Z"}
+{"level":"info","message":"Hello from Acquisitions","service":"acquisitions-api","timestamp":"2026-05-06T11:40:25.864Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:40:25 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0\"","service":"acquisitions-api","timestamp":"2026-05-06T11:40:25.875Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:42.166Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:40:42 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:40:42.182Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:53.830Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:40:53 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:40:53.833Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:54.753Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:40:54 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:40:54.756Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:40:55.878Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:40:55 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:40:55.880Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:41:01.304Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:41:01 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:41:01.306Z"}
+{"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:50:03.305Z"}
+{"level":"info","message":"::1 - - [06/May/2026:11:50:03 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:50:03.322Z"}
