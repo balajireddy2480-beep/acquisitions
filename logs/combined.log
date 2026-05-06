@@ -651,3 +651,6 @@
 {"level":"info","message":"::1 - - [06/May/2026:11:41:01 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:41:01.306Z"}
 {"level":"error","message":"Error authenticating user: Error: User not found","service":"acquisitions-api","timestamp":"2026-05-06T11:50:03.305Z"}
 {"level":"info","message":"::1 - - [06/May/2026:11:50:03 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 500 26 \"-\" \"HTTPie\"","service":"acquisitions-api","timestamp":"2026-05-06T11:50:03.322Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/May/2026:12:17:35 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-05-06T12:17:35.236Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/May/2026:12:17:35 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-05-06T12:17:35.276Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/May/2026:12:17:35 +0000] \"GET /non-existent HTTP/1.1\" 404 151 \"-\" \"-\"","service":"acquisitions-api","timestamp":"2026-05-06T12:17:35.313Z"}

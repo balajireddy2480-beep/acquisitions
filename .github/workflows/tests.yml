@@ -1,0 +1,91 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+  pull_request:
+    branches:
+      - main
+      - staging
+
+jobs:
+  test:
+    name: Jest Test Suite
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: test
+      NODE_OPTIONS: --experimental-vm-modules
+      DATABASE_URL: postgres://test:test@localhost:5432/test
+      JWT_SECRET: test-secret
+      ARCJET_KEY: test-arcjet-key
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        id: tests
+        shell: bash
+        run: |
+          set +e
+          npm test 2>&1 | tee test-output.log
+          test_exit=${PIPESTATUS[0]}
+
+          if [ "$test_exit" -ne 0 ]; then
+            echo "::error title=Tests failed::Run npm test locally to reproduce and fix the failing tests."
+            echo "result=failure" >> "$GITHUB_OUTPUT"
+            exit "$test_exit"
+          fi
+
+          echo "result=success" >> "$GITHUB_OUTPUT"
+
+      - name: Upload coverage report
+        if: always() && hashFiles('coverage/**') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 30
+
+      - name: Publish test summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Test Results"
+            echo
+            if [ "${{ steps.tests.outcome }}" = "success" ]; then
+              echo "- Status: Passed"
+            else
+              echo "- Status: Failed"
+              echo "- Suggested fix: run \`npm test\` locally and address the failures above."
+            fi
+
+            if [ -f coverage/lcov.info ]; then
+              echo "- Coverage: generated and uploaded as \`coverage-report\`."
+            elif [ -d coverage ]; then
+              echo "- Coverage: coverage directory found and uploaded when available."
+            else
+              echo "- Coverage: no coverage output was generated."
+            fi
+
+            if [ -f test-output.log ]; then
+              echo
+              echo "### Last test output"
+              echo '```text'
+              tail -n 40 test-output.log
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
