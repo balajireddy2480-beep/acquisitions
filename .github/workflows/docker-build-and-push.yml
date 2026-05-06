@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/acquisitions
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/kubernetes__demo-api
 
 jobs:
   docker-build-and-push:
